@@ -39,16 +39,17 @@
      <Compile Include="Assets\Scripts\Arrow.cs" />
      <Compile Include="Assets\Scripts\CharacterController2D.cs" />
      <Compile Include="Assets\Scripts\Bow.cs" />
+     <Compile Include="Assets\Scripts\Enemy.cs" />
+     <Compile Include="Assets\Scripts\EnemySpawnerScript.cs" />
+     <Compile Include="Assets\ScoreScript.cs" />
      <Compile Include="Assets\Scripts\Bow2.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\Countdown.cs" />
      <Compile Include="Assets\Scripts\WeaponSwitching.cs" />
+     <Compile Include="Assets\Scripts\Enemy2.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\DragNShoot.cs" />
-     <Compile Include="Assets\ScoreScript.cs" />
-     <Compile Include="Assets\Scripts\Enemy.cs" />
-     <Compile Include="Assets\Scripts\Enemy2.cs" />
-     <Compile Include="Assets\Scripts\EnemySpawnerScript.cs" />
+     <Compile Include="Assets\Scripts\RandomSpawner.cs" />
     <Reference Include="UnityEngine">
         <HintPath>E:/Unity/2020.1.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -693,6 +694,12 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
         <HintPath>D:/Projetos/Jogo-2D/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.DeviceSimulator.Tests.Common">
+        <HintPath>D:/Projetos/Jogo-2D/Library/ScriptAssemblies/Unity.DeviceSimulator.Tests.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.DeviceSimulator.Editor">
+        <HintPath>D:/Projetos/Jogo-2D/Library/ScriptAssemblies/Unity.DeviceSimulator.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
