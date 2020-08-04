@@ -51,11 +51,12 @@ public class Bow : MonoBehaviour
             {
                 Shoot();
             }
-
+            
             for (int i = 0; i < numberOfPoints; i++)
             {
                 points[i].transform.position = PointPosition(i * spaceBetweenPoints);
             }
+            
         }
     }
 

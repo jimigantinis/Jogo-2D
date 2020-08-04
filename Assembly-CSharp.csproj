@@ -39,12 +39,16 @@
      <Compile Include="Assets\Scripts\Arrow.cs" />
      <Compile Include="Assets\Scripts\CharacterController2D.cs" />
      <Compile Include="Assets\Scripts\Bow.cs" />
-     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-     <Compile Include="Assets\Scripts\DragNShoot.cs" />
+     <Compile Include="Assets\Scripts\Bow2.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\Countdown.cs" />
-     <Compile Include="Assets\WeaponSwitching.cs" />
-     <Compile Include="Assets\Scripts\Bow2.cs" />
+     <Compile Include="Assets\Scripts\WeaponSwitching.cs" />
+     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\DragNShoot.cs" />
+     <Compile Include="Assets\ScoreScript.cs" />
+     <Compile Include="Assets\Scripts\Enemy.cs" />
+     <Compile Include="Assets\Scripts\Enemy2.cs" />
+     <Compile Include="Assets\Scripts\EnemySpawnerScript.cs" />
     <Reference Include="UnityEngine">
         <HintPath>E:/Unity/2020.1.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -579,6 +583,9 @@
     <Reference Include="System.Xml.Serialization">
         <HintPath>E:/Unity/2020.1.0f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+        <HintPath>D:/Projetos/Jogo-2D/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Timeline.Editor">
         <HintPath>D:/Projetos/Jogo-2D/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
@@ -588,8 +595,17 @@
     <Reference Include="Unity.2D.PixelPerfect.Editor">
         <HintPath>D:/Projetos/Jogo-2D/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+        <HintPath>D:/Projetos/Jogo-2D/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
         <HintPath>D:/Projetos/Jogo-2D/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Editor">
+        <HintPath>D:/Projetos/Jogo-2D/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+        <HintPath>D:/Projetos/Jogo-2D/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Editor">
         <HintPath>D:/Projetos/Jogo-2D/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
@@ -600,8 +616,17 @@
     <Reference Include="Unity.2D.Path.Editor">
         <HintPath>D:/Projetos/Jogo-2D/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+        <HintPath>D:/Projetos/Jogo-2D/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Editor">
+        <HintPath>D:/Projetos/Jogo-2D/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
         <HintPath>D:/Projetos/Jogo-2D/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Searcher.Editor">
+        <HintPath>D:/Projetos/Jogo-2D/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
         <HintPath>D:/Projetos/Jogo-2D/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
@@ -614,6 +639,9 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
         <HintPath>D:/Projetos/Jogo-2D/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+        <HintPath>D:/Projetos/Jogo-2D/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
         <HintPath>D:/Projetos/Jogo-2D/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
@@ -645,8 +673,14 @@
     <Reference Include="Unity.VisualStudio.Editor">
         <HintPath>D:/Projetos/Jogo-2D/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ShaderGraph.Editor">
+        <HintPath>D:/Projetos/Jogo-2D/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Mathematics.Editor">
         <HintPath>D:/Projetos/Jogo-2D/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+        <HintPath>D:/Projetos/Jogo-2D/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
         <HintPath>D:/Projetos/Jogo-2D/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>

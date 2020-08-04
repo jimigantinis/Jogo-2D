@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Arrow
+  - Arrow2
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - Player
   - Background
   - Arrow
-  - 
+  - Target
   - 
   - 
   - 
@@ -43,6 +45,15 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 1710447953
+    locked: 0
+  - name: Arrow
+    uniqueID: 2199248807
+    locked: 0
+  - name: Target
+    uniqueID: 686480551
+    locked: 0
+  - name: Player
+    uniqueID: 546964057
     locked: 0
   - name: Default
     uniqueID: 0
