@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy2 : MonoBehaviour
 {
+    int wrong = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +21,20 @@ public class Enemy2 : MonoBehaviour
     {
         if (col.gameObject.tag.Equals("Arrow2"))
         {
+            FindObjectOfType<AudioSource>().Play();
             ScoreScript.scoreValue += 10;
             Destroy (col.gameObject);
             Destroy (gameObject);
+        }
+        if (col.gameObject.tag.Equals("Arrow"))
+        {
+            FindObjectOfType<AudioSource>().Play();
+            wrong--;
+        }
+        if (wrong<=0)
+        {
+            Bow.currentAmmo = 0;
+            Bow2.currentAmmo = 0;
         }
     }
 }

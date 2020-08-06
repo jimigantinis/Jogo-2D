@@ -13,7 +13,7 @@ public class Bow2 : MonoBehaviour
     public int numberOfPoints;
     public float spaceBetweenPoints;
     public int maxAmmo = 7;
-    private int currentAmmo;
+    public static int currentAmmo;
     Vector2 direction;
 
     private void Start()
@@ -26,35 +26,42 @@ public class Bow2 : MonoBehaviour
         }
     }
     
-     void Update()
+    void Update()
     {
-        if (currentAmmo <=0)
+        if (PauseMenu.GameIsPaused || VictoryMenu.GameIsPaused || EndMenu.GameIsPaused)
         {
-            Vector2 bowPosition = transform.position;
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            direction = mousePosition - bowPosition;
-            transform.right = direction;
 
-            for (int i = 0; i < numberOfPoints; i++)
-            {
-                points[i].transform.position = PointPosition(i * spaceBetweenPoints);
-            }
-        }
-        else 
+        } else
         {
-            Vector2 bowPosition = transform.position;
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            direction = mousePosition - bowPosition;
-            transform.right = direction;
 
-            if (Input.GetMouseButtonUp(0))
+            if (currentAmmo <= 0)
             {
-                Shoot();
+                Vector2 bowPosition = transform.position;
+                Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                direction = mousePosition - bowPosition;
+                transform.right = direction;
+
+                for (int i = 0; i < numberOfPoints; i++)
+                {
+                    points[i].transform.position = PointPosition(i * spaceBetweenPoints);
+                }
             }
-
-            for (int i = 0; i < numberOfPoints; i++)
+            else
             {
-                points[i].transform.position = PointPosition(i * spaceBetweenPoints);
+                Vector2 bowPosition = transform.position;
+                Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                direction = mousePosition - bowPosition;
+                transform.right = direction;
+
+                if (Input.GetMouseButtonUp(0))
+                {
+                    Shoot();
+                }
+
+                for (int i = 0; i < numberOfPoints; i++)
+                {
+                    points[i].transform.position = PointPosition(i * spaceBetweenPoints);
+                }
             }
         }
     }
@@ -65,6 +72,7 @@ public class Bow2 : MonoBehaviour
 
         GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
         newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
+        FindObjectOfType<AudioSource>().Play();
     }
 
     Vector2 PointPosition(float t) {
