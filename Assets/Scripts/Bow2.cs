@@ -20,10 +20,10 @@ public class Bow2 : MonoBehaviour
     {
         currentAmmo = maxAmmo;
         points = new GameObject[numberOfPoints];
-        for (int i = 0; i < numberOfPoints; i++)
+        /*for (int i = 0; i < numberOfPoints; i++)
         {
             points[i] = Instantiate(point, shotPoint.position, Quaternion.identity);
-        }
+        }*/
     }
     
     void Update()
@@ -41,10 +41,10 @@ public class Bow2 : MonoBehaviour
                 direction = mousePosition - bowPosition;
                 transform.right = direction;
 
-                for (int i = 0; i < numberOfPoints; i++)
+                /*for (int i = 0; i < numberOfPoints; i++)
                 {
                     points[i].transform.position = PointPosition(i * spaceBetweenPoints);
-                }
+                }*/
             }
             else
             {
@@ -58,10 +58,10 @@ public class Bow2 : MonoBehaviour
                     Shoot();
                 }
 
-                for (int i = 0; i < numberOfPoints; i++)
+                /*for (int i = 0; i < numberOfPoints; i++)
                 {
                     points[i].transform.position = PointPosition(i * spaceBetweenPoints);
-                }
+                }*/
             }
         }
     }

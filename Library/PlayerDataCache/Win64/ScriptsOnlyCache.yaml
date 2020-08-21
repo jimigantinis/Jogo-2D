@@ -71,8 +71,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -309,6 +311,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14822}
     - Class: 114
       Script: {instanceID: 15186}
+    - Class: 114
+      Script: {instanceID: 15238}
+    - Class: 114
+      Script: {instanceID: 15772}
+    - Class: 114
+      Script: {instanceID: 16720}
     - Class: 114
       Script: {instanceID: 16846}
     - Class: 114
@@ -1524,4 +1532,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: D:/Projetos/Jogo-2D/Arco Mago Final/Big Bang BR.exe
+  playerPath: D:/Projetos/Jogo-2D/Arco Mago/Arco Mago.exe
